@@ -1,16 +1,178 @@
-# React + Vite
+# Student Management System (Full Stack)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This is a full-stack **Student Management System** built using **React, Node.js, and PostgreSQL**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+It allows users to:
 
-## React Compiler
+* Add, edit, delete students
+* Upload and preview photos
+* Search, filter, and paginate student data
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Repositories
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Frontend Repo:** https://github.com/ankita007-coder/Student-Management-Frontend.git
+* **Backend Repo:** https://github.com/ankita007-coder/Student-Management-Backend.git
+
+---
+
+## Live Links
+
+* **Frontend:** https://sms-pillai.netlify.app/
+* **Backend API:** https://student-management-backend-2f9p.onrender.com/
+
+---
+
+## Tech Stack
+
+### Frontend
+
+* React (Vite)
+* Axios
+* CSS (Dark Theme)
+
+### Backend
+
+* Node.js
+* Express.js
+* Sequelize ORM
+
+### Database
+
+* PostgreSQL (Supabase)
+
+### File Upload
+
+* Multer + Cloudinary
+
+---
+
+## Features
+
+* Add Student (with validation)
+* Edit / Update Student
+* Delete Student
+* View Students in table
+* Upload & preview photo
+* Search students
+* Filter by course & year
+* Pagination
+* Responsive UI
+
+---
+
+## Setup Instructions
+
+### Clone Both Repositories
+
+```bash
+git clone https://github.com/ankita007-coder/Student-Management-Backend.git
+git clone https://github.com/ankita007-coder/Student-Management-Frontend.git
+```
+
+---
+
+## Backend Setup
+
+```bash
+cd backend-repo
+npm install
+```
+
+### Create `.env` file:
+
+```env
+DB_URI=your_postgresql_connection_string
+CLOUD_NAME=your_cloudinary_name
+CLOUD_API_KEY=your_api_key
+CLOUD_API_SECRET=your_api_secret
+```
+
+### Run Backend:
+
+```bash
+npm run dev
+```
+
+Backend will run on:
+
+```
+http://localhost:5000
+```
+
+---
+
+## Frontend Setup
+
+```bash
+cd frontend-repo
+npm install
+```
+
+### Update API Base URL
+
+In `src/services/api.js`:
+
+```js
+baseURL: "http://localhost:5000"
+```
+
+### Run Frontend:
+
+```bash
+npm run dev
+```
+
+Frontend will run on:
+
+```
+http://localhost:5173
+```
+
+---
+
+## API Endpoints
+
+* GET /students
+* GET /students/:id
+* POST /students
+* PUT /students/:id
+* DELETE /students/:id
+
+---
+
+## Database
+
+### Student Table Fields
+
+* id (UUID)
+* admissionNumber (Unique)
+* name
+* course
+* year
+* dob
+* email (Unique)
+* mobile
+* gender
+* address
+* photoUrl
+
+---
+
+## Notes
+
+* Admission number is auto-generated
+* Images are stored in Cloudinary
+* Validation is implemented on frontend & backend
+
+---
+
+## Author
+
+Ankita
+Full Stack Developer
+
+---
