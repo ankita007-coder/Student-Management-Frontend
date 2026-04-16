@@ -183,12 +183,12 @@ input:focus,.gender:focus {
   background-color: #334155;
 }
 
-/* Inputs spacing improvement */
+/* Inputs */
 form input {
   margin-bottom: 15px;
 }
 
-/* File input tweak */
+/* File input */
 input[type="file"] {
   padding: 8px;
   background-color: #0f172a;
