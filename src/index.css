@@ -1,0 +1,271 @@
+/* Global */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0f172a; /* deep dark */
+  color: #e2e8f0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  display: block;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 15px; 
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f8fafc;
+}
+
+/* Button */
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Add Button */
+.add-btn {
+  background-color: #22c55e;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Edit Button */
+.edit-btn {
+  background-color: #3b82f6;
+  color: white;
+  margin-right: 8px;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Table Header */
+thead {
+  background-color: #334155;
+  color: #f1f5f9;
+}
+
+/* Table Cells */
+th,
+td {
+  padding: 12px;
+  text-align: center;
+}
+
+/* Row hover */
+tbody tr:hover {
+  background-color: #2c3a4f;
+}
+
+/* Image */
+img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #475569;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Inputs */
+input{
+  width: 96%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #475569;
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+input::placeholder{
+  color: #e2e8f0;
+}
+.gender,.gender option {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #475569;
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+/* Input focus */
+input:focus,.gender:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+/* Submit button */
+.submit-btn {
+  background-color: #22c55e;
+  color: white;
+  width: 100%;
+}
+
+/* Search box */
+.search-box {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #475569;
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.pagination button {
+  margin: 0 5px;
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Card style */
+.form-card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Back button */
+.back-btn {
+  background-color: whitesmoke;
+  color: #1e293b;
+  border: 1px solid #1e293b;
+  margin-bottom: 15px;
+}
+
+.back-btn:hover {
+  background-color: #334155;
+}
+
+/* Inputs spacing improvement */
+form input {
+  margin-bottom: 15px;
+}
+
+/* File input tweak */
+input[type="file"] {
+  padding: 8px;
+  background-color: #0f172a;
+  border: 1px solid #475569;
+}
+
+/* Submit button polish */
+.submit-btn {
+  margin-top: 10px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.loading-page{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters, .filters option{
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #475569;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.error {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: -8px;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  h2 {
+    font-size: 20px;
+  }
+
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .form-card {
+    padding: 15px;
+  }
+
+  button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .search-box {
+    width: 90%;
+  }
+
+  .button-col{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+  }
+  .button-col button{
+    width: 80px;
+    margin: 0;
+  }
+  .filters, .filters option{
+    width: 95%;
+  }
+}
