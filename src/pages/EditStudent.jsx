@@ -14,13 +14,12 @@ const EditStudent = () => {
     const fetchStudent = async () => {
       try {
         const res = await axiosFetch.get(`/students/${id}`);
-        setForm(res.data);
-        if(res?.data?.dob){
-          setForm({
-            ...form,
-            dob: res.data.dob.split("T")[0]
-          })
-        }
+        const student = res.data;
+
+        setForm({
+          ...student,
+          dob: student?.dob ? student.dob.split("T")[0] : "",
+        });
         setPreview(res.data.photoUrl); // show existing image
       } catch (err) {
         console.error(err);
@@ -70,7 +69,7 @@ const EditStudent = () => {
     <div className="container">
       <div className="form-card">
         <button className="back-btn" onClick={() => navigate("/")}>
-           Back
+          Back
         </button>
 
         <h2>Edit Student</h2>
@@ -132,13 +131,16 @@ const EditStudent = () => {
             type="date"
             name="dob"
             value={form.dob}
-            onClick={(e) =>
-              e.target.showPicker && e.target.showPicker()
-            }
+            onClick={(e) => e.target.showPicker && e.target.showPicker()}
             onChange={handleChange}
           />
 
-          <select className="gender" name="gender" value={form.gender} onChange={handleChange}>
+          <select
+            className="gender"
+            name="gender"
+            value={form.gender}
+            onChange={handleChange}
+          >
             <option value="">Select Gender</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
